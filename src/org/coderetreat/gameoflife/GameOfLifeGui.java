@@ -9,10 +9,12 @@ import com.spun.util.Colors;
 
 public class GameOfLifeGui extends JPanel {
 
+	private static final int BOARD_WIDTH = 16;
 	private static final int CELL_WIDTH = 64;
-	private static final int WIDTH = CELL_WIDTH * 16;
+	private static final int WIDTH = CELL_WIDTH * BOARD_WIDTH;
 	private static final int CELL_HEIGHT = 64;
-	private static final int HEIGHT = CELL_HEIGHT * 9;
+	private static final int BOARD_HEIGHT = 9;
+	private static final int HEIGHT = CELL_HEIGHT * BOARD_HEIGHT;
 
 	private GameOfLife gameOfLife;
 

@@ -19,4 +19,14 @@ public class GameOfLifeTest {
 		Approvals.verify(new GameOfLifeGui(gameOfLife));
 	}
 
+	@Test
+	public void blinkersBlink() throws Exception {
+		GameOfLife gameOfLife = new GameOfLife();
+		gameOfLife.place(1, 2);
+		gameOfLife.place(1, 3);
+		gameOfLife.place(1, 4);
+		gameOfLife.advance();
+		Approvals.verify(new GameOfLifeGui(gameOfLife));
+	}
+
 }
