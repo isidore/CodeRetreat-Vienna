@@ -25,8 +25,8 @@ public class GameOfLifeGui extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		g.setColor(Colors.Greens.DarkGreen);
-		gameOfLife.renderCellsTo((x, y) -> {
-			g.fillRect(x * CELL_WIDTH, y * CELL_HEIGHT, CELL_WIDTH, CELL_HEIGHT);
+		gameOfLife.renderCellsTo((p) -> {
+			g.fillRect(p.x * CELL_WIDTH, p.y * CELL_HEIGHT, CELL_WIDTH, CELL_HEIGHT);
 		});
 	}
 }

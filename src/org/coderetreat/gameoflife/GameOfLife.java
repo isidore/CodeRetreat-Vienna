@@ -1,9 +1,8 @@
 package org.coderetreat.gameoflife;
 
-import java.awt.Point;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 public class GameOfLife {
 
@@ -13,8 +12,8 @@ public class GameOfLife {
 		cells.add(new Point(x, y));
 	}
 
-	public void renderCellsTo(BiConsumer<Integer, Integer> consumer) {
-		cells.forEach(point -> consumer.accept(point.x, point.y));
+	public void renderCellsTo(Consumer<Point> consumer) {
+		cells.forEach(consumer);
 	}
 
 }
